@@ -38,15 +38,27 @@ class HashTables:
         return all_keys
 
 
-my_hashtable = HashTables()
+# my_hashtable = HashTables()
 
-# my_hashtable.print_table()
+# # my_hashtable.print_table()
 
-my_hashtable.insert("ball", 5)
-my_hashtable.insert("bat", 2)
-my_hashtable.insert("player", 11)
-# my_hashtable.print_table()
+# my_hashtable.insert("ball", 5)
+# my_hashtable.insert("bat", 2)
+# my_hashtable.insert("player", 11)
+# # my_hashtable.print_table()
 
-print(my_hashtable.get("player"))
+# print(my_hashtable.get("player"))
 
-print(my_hashtable.keys())
+# print(my_hashtable.keys())
+
+list1=[1,2,3]
+list2=[2,3,4]
+def item_in_common(list1, list2):
+    dict={}
+    for i in list1:
+        dict[i]=True
+    for y in list2 :
+        if y in dict:
+            return True
+    return Falsealse
+
