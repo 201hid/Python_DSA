@@ -60,5 +60,6 @@ def item_in_common(list1, list2):
     for y in list2 :
         if y in dict:
             return True
-    return Falsealse
+    return False
 
+print(item_in_common(list1,list2))
