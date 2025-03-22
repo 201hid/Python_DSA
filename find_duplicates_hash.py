@@ -26,9 +26,8 @@ def find_duplicates(list1):
     for element, count in seen.items():
         if count > 1:
             duplicates.append(element)
-
-    return duplicates
-
+    return duplicates 
+# when we do seen.item() we get a tuple of key and value
 print(find_duplicates([1, 2, 3, 4, 5]))
 print(find_duplicates([1, 1, 2, 2, 3]))
 print(find_duplicates([1, 1, 1, 1, 1]))
