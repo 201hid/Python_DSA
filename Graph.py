@@ -22,11 +22,12 @@ class Graph:
             self.adj_list[v1].remove(v2)
             self.adj_list[v2].remove(v1)
             return True
-    def remov_edge(self, v1, v2):
-        if v1 and v2 in self.adj_list:
-            self.adj_list[v1].remove(v2)
-            self.adj_list[v2].remove(v1)
-            return True
+    def remove_vertex(self,vertex):
+        if vertex in self.adj_list:
+            for other_vertex in self.adj_list[vertex]:
+                self
+
+        
     
 my_graph=Graph()
 my_graph.add_vertex('a')
