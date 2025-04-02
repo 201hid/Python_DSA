@@ -1,6 +1,7 @@
 class MaxHeap:
-    def init(self):
+    def __init__(self):
         self.heap=[]
+
 
     def  _left_child(self, index):
         return (2*index)+1
@@ -9,6 +10,22 @@ class MaxHeap:
         return (2*index)+2
     
     def  _parent(self, index):
-        return (index-1)/2
+        return (index-1)//2
+    
     def _swap(self, index1, index2):
         self.heap[index1], self.heap[index2]=self.heap[index2], self.heap[index1]    
+
+    def insert(self,value):
+        self.heap.append(value)
+        current= len(self.heap)-1
+        while current>0 and self.heap[current] > self.heap[self._parent(current)]:
+            self.swap(self.heap[current], self.heap[self._parent(current)])
+            current=self._parent(current)
+
+myheap= MaxHeap()
+myheap.insert(99)
+myheap.insert(72)
+myheap.insert(61)
+myheap.insert(58)
+
+print(myheap.heap)
