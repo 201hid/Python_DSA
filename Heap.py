@@ -26,13 +26,17 @@ class MaxHeap:
         current= self.heap[0]
         max_index=index
         while True:
-            right_child=self._right_child(index)
-            left_child=self._left_child(index)
+            right_index=self._right_child(index)
+            left_index=self._left_child(index)
 
-            if self.heap[right_child]>self.heap[max_index]:
-                max_index=right_child
-            if self.heap[left_child]>self.heap[max_index]:
-                max_index=left_child
+            if self.heap[right_index]>self.heap[max_index] and righ:
+                max_index=right_index
+            if self.heap[left_index]>self.heap[max_index]:
+                max_index=left_index
+            
+            if max_index!=index:
+                self._swap(index, max_index)
+
 
 
 
